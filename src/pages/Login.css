@@ -6,6 +6,7 @@
 	align-items: center;
 }
 .Page-login .app-logo {
+	margin-top: vh;
 	width: 45%;
 	justify-content: center;
 	align-items: center;
@@ -17,9 +18,29 @@
 	}
 }
 
-
-div.btn-area {
+.large-logo-area {
+	height: 15vh;
+	background-color: #C3073F;
+	
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	/* align-tiems: center; */
+}
+.login-area {
+	margin-top: 5vh;
+	width: 300px;
 	display: flex;
 	justify-content: center;
-	/* align-items: center; */
 }
+.row {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-around; */
+	align-items: center;
+	margin: 5px;
+}
+.row p {
+	margin: 5vh;
+}
+
