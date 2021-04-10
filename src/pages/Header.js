@@ -7,14 +7,16 @@ import { Link } from "react-router-dom";
 const Header = () => {
 	return (
 		<header>
-			<div class="widget-area">
-				<i class="fab fa-twitter"></i>
+			<div class="row">
+				<div class="widget-area">
+					<i class="fab fa-twitter"></i>
+				</div>
+				<div class="menu-btn-area">
+					<i class="fas fa-bars"></i>
+					<input id="ckbx-bars" type="checkbox" value=""></input>
+				</div>
 			</div>
-			<div class="menu-btn-area">
-				<i class="fas fa-bars"></i>
-				<input id="ckbx-bars" type="checkbox" value=""></input>
-			</div>
-			<div>
+			<div class="row">
 				<nav class="side-menu-area">
 					<ul>
 						<Link to="/dashboard"><li>대시보드</li></Link>
@@ -24,7 +26,6 @@ const Header = () => {
 					</ul>
 				</nav>
 			</div>
-			
 		</header>
 	)
 }
