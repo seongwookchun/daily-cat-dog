@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Login from './pages/Login';
+import Header from './pages/Header';
+import Dashboard from './pages/Dashboard';
+import Guardian from './pages/Guardian';
+import PetInfos from './pages/PetInfos';
+import Settings from './pages/Settings';
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,23 +16,25 @@ import {
   Link
 } from "react-router-dom";
 
-import Login from './pages/Login';
-import Header from './pages/Header';
-import PetInfos from './pages/PetInfos';
-import Dashboard from './pages/Dashboard';
-
 
 const App = () => {
     return (
 			<Router>
 				<div className="App">
 					<Header />
+					
 					<Switch>
-						<Route path="/login">
+          	<Route path="/login">
 							<Login />
 						</Route>
 						<Route path="/dashboard">
 							<Dashboard />
+						</Route>
+						<Route path="/guardian">
+							<Guardian />
+						</Route>
+						<Route path="/petinfos">
+							<PetInfos />
 						</Route>
 					</Switch>
 				</div>
