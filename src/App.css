@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Jua', 'sans-serif';
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-tiems: center; */
+	height: 100vh;
+}
+
+/* .App {
+	background-color: green;
+} */
+.card-area {
+	height: 15vh;
+	background-color: #eb5779;
+	
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	/* align-tiems: center; */
+}
+
+.input-area {
+	margin: 5%;
+	position: relative;
+}
+
+.input-area input {
+	width: 100%;
+	border-radius: 25px;
+}
+.input-area label {
+	position: absolute; left: 10px; top: 15px;
+	font-size: 18px; color: #999;
+	transition: top .5s ease;
+}
+.input-area input:focus + label,
+.input-area input:valid + label {
+	top: 0;
+}
+.Page-login {
+	/* position: absolute 0 0 0 0; */
+	/* background-color: black; */
+	display: flex;
+	flex-direction: column;
+}
+.Page-login .app-logo {
+	width: 75%;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+
+.card-title {
+	font-size: 50px;
+}
