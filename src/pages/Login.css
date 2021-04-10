@@ -1,0 +1,25 @@
+.Page-login {
+	/* position: absolute 0 0 0 0; */
+	/* background-color: black; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.Page-login .app-logo {
+	width: 45%;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+	.Page-login .app-logo {
+		width: 100%;
+	}
+}
+
+
+div.btn-area {
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}

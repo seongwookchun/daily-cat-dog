@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-
+:root {
+	--color-normal: grey;
+	--color-font-normal: white;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -14,9 +17,10 @@ body {
 	height: 100vh;
 }
 
-/* .App {
-	background-color: green;
-} */
+a {
+	text-decoration: none;
+	color: inherit;
+}
 .card-area {
 	height: 15vh;
 	background-color: #eb5779;
@@ -26,12 +30,10 @@ body {
 	/* justify-content: center; */
 	/* align-tiems: center; */
 }
-
 .input-area {
 	margin: 5%;
 	position: relative;
 }
-
 .input-area input {
 	width: 100%;
 	border-radius: 25px;
@@ -41,24 +43,47 @@ body {
 	font-size: 18px; color: #999;
 	transition: top .5s ease;
 }
-.input-area input:focus + label,
-.input-area input:valid + label {
-	top: 0;
-}
-.Page-login {
-	/* position: absolute 0 0 0 0; */
-	/* background-color: black; */
-	display: flex;
-	flex-direction: column;
-}
-.Page-login .app-logo {
-	width: 75%;
-	justify-content: center;
-	align-items: center;
-	
-}
-
-
 .card-title {
 	font-size: 50px;
 }
+
+/* text ornamentation */
+/* blockquote::before {
+	content: open-quote;
+	font-size: 2rem;
+}
+blockquote::after {
+	content: close-quote;
+	font-size: 2rem;
+} */
+.article-area {
+	position:relative;	
+}
+[data-tool-tip] {
+	position:relative;	
+}
+[data-tool-tip]::after {
+	content: attr(data-tool-tip);
+	display: block;
+	position: absolute;
+	padding: 0.5em 0.5em;
+
+	border-radius: 0.5em;
+	background-color: var(--color-normal);
+	color: var(--color-font-normal);
+
+	font-size: 0.5em;
+	
+	left: 0;
+	top: 0;
+	white-space: nowrap;
+	transform: scale(0);
+	transition: 
+		transform ease-out 50ms,
+		bottom ease-out 250ms;
+}
+[data-tool-tip]:hover::after {
+	transform: scale(1);
+	z-index: 1;
+}
+
