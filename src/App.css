@@ -21,7 +21,9 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
-
+ul {
+	list-style: none;
+}
 .input-area {
 	margin: 5%;
 	position: relative;

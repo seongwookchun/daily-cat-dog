@@ -13,14 +13,16 @@ const Header = () => {
 			<div class="menu-btn-area">
 				<i class="fas fa-bars"></i>
 				<input id="ckbx-bars" type="checkbox" value=""></input>
+			</div>
+			<div>
 				<nav class="side-menu-area">
-				<ul>
-					<Link to="/dashboard"><li>대시보드</li></Link>
-					<Link to="/cat-dog"><li>댕냥이</li></Link>
-					<Link to="/guardian"><li>집사</li></Link>
-					<Link to="/settings"><li>설정</li></Link>
-				</ul>
-			</nav>
+					<ul>
+						<Link to="/dashboard"><li>대시보드</li></Link>
+						<Link to="/cat-dog"><li>댕냥이</li></Link>
+						<Link to="/guardian"><li>집사</li></Link>
+						<Link to="/settings"><li>설정</li></Link>
+					</ul>
+				</nav>
 			</div>
 			
 		</header>
