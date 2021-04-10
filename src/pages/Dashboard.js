@@ -4,7 +4,7 @@ import React from 'react';
 const Dashboard = () => {
 	return (
 		<section>
-			대시보드
+			<h1>대시보드</h1>
 		</section>
 	)
 }

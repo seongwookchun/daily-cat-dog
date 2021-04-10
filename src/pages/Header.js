@@ -1,32 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
+import ToggleMenuBtn from '../components/ToggleMenuBtn';
+// import Sidebar from '../components/Sidebar';
 
 import { Link } from "react-router-dom";
 
 
 const Header = () => {
+	const [stateSidebar, setStateSidebar] = useState(false);
+	// const e = document.querySelector('.sidebar-area');
+	const toggleSidebar = () => {
+		// e.style.display = 'block' ? e.style.display === 'none' : 'none';
+		// console.log(`e: ${e}`);
+		// alert('hi')
+		if (stateSidebar === true) {
+			setStateSidebar(false);
+		}
+		else {
+			setStateSidebar(true)
+		} 
+	}
+	
 	return (
 		<header>
-			<div class="row">
+			<div class="wrapper">
 				<div class="widget-area">
-					<i class="fab fa-twitter"></i>
+					<ToggleMenuBtn id="menuicon" color="white" clickHandler='' />
+					<button>show</button>
 				</div>
-				<div class="menu-btn-area">
-					<i class="fas fa-bars"></i>
-					<input id="ckbx-bars" type="checkbox" value=""></input>
+				<div class="sidebar-area">
+					
 				</div>
-			</div>
-			<div class="row">
-				<nav class="side-menu-area">
-					<ul>
-						<Link to="/dashboard"><li>대시보드</li></Link>
-						<Link to="/cat-dog"><li>댕냥이</li></Link>
-						<Link to="/guardian"><li>집사</li></Link>
-						<Link to="/settings"><li>설정</li></Link>
-					</ul>
-				</nav>
 			</div>
 		</header>
+			
 	)
 }
 

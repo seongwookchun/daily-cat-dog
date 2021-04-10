@@ -1,12 +1,28 @@
-header {
-	/* display: flex; */
-	padding: 0 3% 0% 3%;
-	background-color: #1A1A1D;
-	color: white;
-	/* height: 7vh; */
-	font-size: 24px;
+header .widget-area {
+	position: fixed;
+	width: 100%;
+	z-index: 1;
 }
-
-header .row {
-	background-color: blue;
+header .widget-area {
+	/* margin 0; */
+	background-color: #1A1A1D;
+	height: 7vh;
+	display: flex;
+	align-items: center;
+	padding: 0 2vw 0 2vw;
+}
+.sidebar-area {
+	display: none;
+	position: fixed;
+	top: 7vh;
+	font-size: 2.0rem;
+	padding: 1vh 1vw;
+}
+.sidebar-area li {
+	margin-bottom: 1rem;
+}
+toggleMenuBtn#menuicon input:checked 
+.toggleMenuBtn {
+	/* background-color: red; */
+	/* display: inline; */
 }

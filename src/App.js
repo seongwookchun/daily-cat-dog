@@ -8,7 +8,9 @@ import Guardian from './pages/Guardian';
 import PetInfos from './pages/PetInfos';
 import Settings from './pages/Settings';
 
+import Say from './components/Say';
 
+// import Sidebar from './components/Sidebar';
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,9 +24,9 @@ const App = () => {
 			<Router>
 				<div className="App">
 					<Header />
-					
+					<Say />
 					<Switch>
-          	<Route path="/login">
+          	<Route exact path={["/", "/login"]}>
 							<Login />
 						</Route>
 						<Route path="/dashboard">
