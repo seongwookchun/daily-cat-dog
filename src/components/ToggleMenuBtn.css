@@ -1,0 +1,55 @@
+.toggleMenuBtn {
+	/* display: block; */
+	display: flex;
+	justify-content: center;
+	align-items: space-between;
+	width: 6vh;
+	height: 5vh;
+	/* padding: 1.0vh 1vw; */
+	padding: 0.5vh 0 0.5vh 0;
+	
+}
+input#menuicon {
+	display:none;
+}
+
+input#menuicon + label {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	cursor: pointer;
+	/* background-color: indianred; */
+}
+
+input#menuicon + label span {
+	position: absolute;
+	width: 32px;
+	height: 2px;
+	border-radius: 0.1em;
+	background: #000;
+	transition: all .10s;
+}
+input#menuicon + label span:nth-child(1) {
+	top: 0;
+}
+input#menuicon + label span:nth-child(2) {
+	top: 50%;
+	transform: translateY(-50%);
+}
+input#menuicon + label span:nth-child(3) {
+	bottom: 0;
+}
+
+input#menuicon:checked + label span:nth-child(1) {
+	top:50%;
+	transform:translateY(-50%) rotate(45deg);
+}
+input#menuicon:checked + label span:nth-child(2) {
+	opacity: 0;
+}
+input#menuicon:checked + label span:nth-child(3) {
+	top:50%;
+	transform:translateY(-50%) rotate(-45deg);
+
+}
