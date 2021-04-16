@@ -5,31 +5,45 @@ import ToggleMenuBtn from '../components/ToggleMenuBtn';
 
 import { Link } from "react-router-dom";
 
+const SidebarItems = [{
+	name: '대시보드',
+	path: 'dashboard'
+}, {
+	name: '멍냥이',
+	path: 'petinfos'
+}, {
+	name: '집사',
+	path: 'guardian'
+}, {
+	name: '심박수 측정',
+	path: 'beat'
+}, {
+	name: '설정',
+	path: 'settings'
+},]
 
 const Header = () => {
-	const [stateSidebar, setStateSidebar] = useState(false);
+	const [stateSidebar, setStateSidebar] = useState('none');
 	// const e = document.querySelector('.sidebar-area');
+
 	const toggleSidebar = () => {
-		// e.style.display = 'block' ? e.style.display === 'none' : 'none';
-		// console.log(`e: ${e}`);
-		// alert('hi')
-		if (stateSidebar === true) {
-			setStateSidebar(false);
+		if (stateSidebar === 'none') {
+			setStateSidebar('block');
+		} else {
+			setStateSidebar('none');
 		}
-		else {
-			setStateSidebar(true)
-		} 
 	}
 	
 	return (
 		<header>
 			<div class="wrapper">
 				<div class="widget-area">
-					<ToggleMenuBtn id="menuicon" color="white" clickHandler='' />
-					<button>show</button>
-				</div>
-				<div class="sidebar-area">
-					
+					<ToggleMenuBtn id="menuicon" color="white" clickHandler='' toggleSidebar={toggleSidebar} />
+					<div class="sidebar-area" style={{display: stateSidebar}}>
+						<ul>
+							{SidebarItems.map(e => <li><Link to={e.path}>{e.name}</Link></li>)}
+						</ul>
+					</div>
 				</div>
 			</div>
 		</header>

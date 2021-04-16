@@ -1,5 +1,5 @@
 header .widget-area {
-	position: fixed;
+	/* position: fixed; */
 	width: 100%;
 	z-index: 1;
 }
@@ -12,11 +12,14 @@ header .widget-area {
 	padding: 0 2vw 0 2vw;
 }
 .sidebar-area {
-	display: none;
+	/* display: none; */
 	position: fixed;
 	top: 7vh;
-	font-size: 2.0rem;
+	/* font-size: 2.0em; */
 	padding: 1vh 1vw;
+}
+#menuicon:checked + .sidebar-area {
+	display: block;
 }
 .sidebar-area li {
 	margin-bottom: 1rem;

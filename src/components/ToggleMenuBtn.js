@@ -4,9 +4,9 @@ import './ToggleMenuBtn.css';
 
 const ToggleMenuBtn = (props) => {
 	return (
-		<div class="toggleMenuBtn">
-			<input type="checkbox" id={props.id}></input>
-			<label for="menuicon" onClick={props.clickHandler}>
+		<div class="toggleMenuBtn" >
+			<input type="checkbox" id={props.id} ></input>
+			<label for="menuicon" onClick={()=>{props.toggleSidebar()}}>
 				<span style={{"background-color": props.color}}></span>
 				<span style={{"background-color": props.color}}></span>
 				<span style={{"background-color": props.color}}></span>
