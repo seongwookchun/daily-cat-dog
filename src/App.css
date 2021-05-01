@@ -1,47 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 :root {
-	--color-normal: grey;
-	--color-font-normal: white;
+  --color-normal: grey;
+  --color-font-normal: white;
 }
 html {
-	margin-top: 0;
+  margin-top: 0;
 }
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Jua', 'sans-serif';
-	/* display: flex; */
-	/* justify-content: center; */
-	/* align-tiems: center; */
-	height: 100vh;
+  font-family: 'Jua', 'sans-serif';
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-tiems: center; */
+  width: 100vw;
+  height: 100vh;
+}
+#root {
+  width: 100%;
+}
+.app {
+  width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 li {
-	list-style: none;
+  list-style: none;
 }
+.prevent-drag {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+  cursor: default;
+}
+
 .input-area {
-	margin: 5%;
-	position: relative;
+  margin: 5%;
+  position: relative;
 }
 .input-area input {
-	width: 100%;
-	border-radius: 25px;
+  width: 100%;
+  border-radius: 25px;
 }
 .input-area label {
-	position: absolute; left: 10px; top: 15px;
-	font-size: 18px; color: #999;
-	transition: top .5s ease;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-size: 18px;
+  color: #999;
+  transition: top 0.5s ease;
 }
 .card-title {
-	font-size: 50px;
+  font-size: 50px;
 }
 
 /* text ornamentation */
@@ -54,30 +79,38 @@ blockquote::after {
 	font-size: 2rem;
 } */
 .article-area {
-	position:relative;	
+  position: relative;
 }
 [data-tool-tip] {
-	position:relative;	
+  position: relative;
 }
 [data-tool-tip]::after {
-	content: attr(data-tool-tip);
-	display: block;
-	position: absolute;
-	background-color: blue;
-	padding: 1em 3em;
-	border-radius: 5px;
-	font-size: .75em;
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: blue;
+  padding: 1em 3em;
+  border-radius: 5px;
+  font-size: 0.75em;
 
-	color: white;
-	bottom: 0;
-	left: 0;
-	white-space: nowrap;
-	transform: scale(0);
-	transition: transform ease-out 150ms;
+  color: white;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out 150ms;
 }
 [data-tool-tip]:hover::after {
-	transform: scale(1);
-	bottom: 100%;
-	z-index: 1;
+  transform: scale(1);
+  bottom: 100%;
+  z-index: 1;
 }
 
+.header-layout {
+  width: 100vw;
+  height: 7vh;
+}
+.page-layout {
+  width: 100vw;
+  height: 93vh;
+}

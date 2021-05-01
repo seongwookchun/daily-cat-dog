@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Guardian from './pages/Guardian';
 import PetInfos from './pages/PetInfos';
 import Settings from './pages/Settings';
-
+import Beat from './pages/Beat';
 import Say from './components/Say';
 
 // import Sidebar from './components/Sidebar';
@@ -23,22 +23,28 @@ const App = () => {
     return (
 			<Router>
 				<div className="App">
-					<Header />
-					<Say />
-					<Switch>
-          	<Route exact path={["/", "/login"]}>
-							<Login />
-						</Route>
-						<Route path="/dashboard">
-							<Dashboard />
-						</Route>
-						<Route path="/guardian">
-							<Guardian />
-						</Route>
-						<Route path="/petinfos">
-							<PetInfos />
-						</Route>
-					</Switch>
+					<div className="header-layout">
+						<Header />
+					</div>
+					<div className="page-layout">
+						<Switch>
+							<Route exact path={["/", "/login"]}>
+								<Login />
+							</Route>
+							<Route path="/dashboard">
+								<Dashboard />
+							</Route>
+							<Route path="/guardian">
+								<Guardian />
+							</Route>
+							<Route path="/petinfos">
+								<PetInfos />
+							</Route>
+							<Route path="/beat">
+								<Beat />
+							</Route>
+						</Switch>
+					</div>
 				</div>
 			</Router>
     );
