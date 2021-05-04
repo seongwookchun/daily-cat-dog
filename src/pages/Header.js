@@ -9,22 +9,32 @@ const sidebarItems = [
   {
     name: '대시보드',
     path: 'dashboard',
+    icon: '📊',
+  },
+  {
+    name: '기록하기',
+    path: 'board',
+    icon: '📝',
   },
   {
     name: '멍냥이',
     path: 'petinfos',
+    icon: '🐱',
   },
   {
     name: '집사',
     path: 'guardian',
+    icon: '🤵',
   },
   {
     name: '심박수 측정',
     path: 'beat',
+    icon: '💓',
   },
   {
     name: '설정',
     path: 'settings',
+    icon: '⚙️',
   },
 ];
 
@@ -48,10 +58,10 @@ const Header = () => {
           style={{ display: stateSidebar === true ? 'block' : 'none' }}
         >
           <ul>
-            {sidebarItems.map((e) => (
+            {sidebarItems.map(({ path, name, icon }) => (
               <li>
-                <Link to={e.path} onClick={toggleSidebar}>
-                  {e.name}
+                <Link to={path} onClick={toggleSidebar}>
+                  {icon} {name}
                 </Link>
               </li>
             ))}

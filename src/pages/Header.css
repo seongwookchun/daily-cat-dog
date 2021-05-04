@@ -1,8 +1,8 @@
 header {
   height: 100%;
   width: 100%;
-  font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 header .widget-area {
   position: fixed;
