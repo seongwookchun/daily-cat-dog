@@ -27,7 +27,7 @@ const Beat = () => {
     if (onMeasure) {
       interval = setInterval(() => {
         setTimer(timer - 1);
-      }, 250); //1000);
+      }, 1000);
     }
     if (timer == 0 && onMeasure) {
       // hit();
