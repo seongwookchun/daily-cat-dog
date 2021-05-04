@@ -1,23 +1,47 @@
 import React from 'react';
 import './Board.css';
+import { getTimestamp } from '../utils/utils';
+// import { useDB } from 'react-pouchdb/browser';
+import { PouchDB, useFind, useAllDocs, useDB, Get } from 'react-pouchdb';
+import { useDispatch, useSelector } from 'react-redux';
+import { category } from '../architecture/category';
 
-const category = [
-  { name: 'eating', nameKo: '식사', icon: '🍴' },
-  { name: 'medicine', nameKo: '약', icon: '💊' },
-  { name: 'bathroom', nameKo: '대소변', icon: '🚻' },
-  { name: 'exercise', nameKo: '운동', icon: '⚽' },
-  { name: 'care', nameKo: '케어', icon: '🐶' },
-  { name: 'hostpital', nameKo: '진료', icon: '🏥' },
-];
 const Board = () => {
+  // const { put, remove } = useDB('clientdb');
+  let dispatch = useDispatch(); // why let??
+  // const timeline = useSelector((state) => state.timeline);
+  const state = useSelector((state) => state);
+  console.log(`state: ${state}`);
+  // console.log(`state.timeline: ${timeline.timeline}`);
+  // console.dir(timeline.timeline);
+  const onClickHandler = (category) => {
+    console.log(`clicked category ${category}.`);
+    const timestamp = getTimestamp();
+    console.log(`now: ${timestamp}`);
+    console.log(`state:\n${state}`);
+    // console.log(`timeline:\n${timeline}`);
+    // const doc = {
+    //   timestamp,
+    //   category,
+    // };
+    dispatch({
+      type: 'POST',
+      newItem: { timestamp: timestamp, category: category },
+      // newItem: category,
+    });
+  };
+
   return (
-    <div className="page-board-layout">
-      <div className="page-title">
+    <section className="page-board-layout">
+      <div className="board page-title">
         <h1>📝기록하기</h1>
       </div>
       <div className="category-wrapper">
         {category.map(({ name, nameKo, icon }) => (
-          <div className={'category category-' + String(name)}>
+          <div
+            className={'category category-' + String(name)}
+            onClick={() => onClickHandler(nameKo)}
+          >
             <dl>
               <dt>{icon}</dt>
               <dd>{nameKo}</dd>
@@ -25,7 +49,7 @@ const Board = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

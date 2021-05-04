@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
+// var PouchDB = require('pouchdb-browser');
+// var db = new PouchDB('my_database');
+
 import Login from './pages/Login';
 import Header from './pages/Header';
 import Dashboard from './pages/Dashboard';
