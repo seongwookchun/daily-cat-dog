@@ -6,3 +6,12 @@ export const category = [
   { name: 'care', nameKo: '케어', icon: '🐶' },
   { name: 'hostpital', nameKo: '진료', icon: '🏥' },
 ];
+
+export const categoryIconDic = {
+  식사: '🍴',
+  약: '💊',
+  대소변: '🚻',
+  운동: '⚽',
+  케어: '🐶',
+  진료: '🏥',
+};

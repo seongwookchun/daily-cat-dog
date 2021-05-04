@@ -25,7 +25,7 @@ const Board = () => {
     //   category,
     // };
     dispatch({
-      type: 'POST',
+      type: 'APPEND',
       newItem: { timestamp: timestamp, category: category },
       // newItem: category,
     });

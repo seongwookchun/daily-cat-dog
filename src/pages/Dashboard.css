@@ -3,7 +3,9 @@
   width: 100%;
   height: 100%;
   /* display: inline-block; */
-  /* display: flex; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
 .dashboard .page-title h1 {
   /* margin: 5% 0; */
@@ -11,19 +13,102 @@
   padding: 5% 0;
   /* height: 10%; */
 }
-
-.timeline-wrapper {
-  /* display: flex; */
-  /* flex-direction: column; */
-  border: 1px solid black;
-  background-color: grey;
-}
-
-.timeline-wrapper li {
+.btn-extra-action {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 2.5rem;
+  font-family: Times;
+  font-weight: bolder;
+  /* border: 1px solid black; */
+  border-radius: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  color: white;
+}
+.btn-extra-action input {
+  display: none;
+}
+.extra-action-bar {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: red; */
+  /* z-index: 1; */
+  position: fixed;
+  border-radius: 5vw;
+  width: 80%;
+  height: 13%;
+  bottom: 10%;
+  left: calc((100%-80%) / 2);
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* transform: rotate(180deg); */
+  /* bottom: 100%; */
+  /* top: auto; */
+  font-size: 1.5rem;
+}
+.extra-action-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 2%;
+}
+.extra-action-bar li {
+  /* margin: 0 4.5%; */
+  /* visibility: hidden; */
+  /* position: absolute; */
+}
+.timeline-wrapper {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  width: 100%;
+}
+.timeline-wrapper ul {
+  width: 80%;
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 5vw;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5vw;
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  padding: 3% 3%;
+}
+.timeline-wrapper li {
+  display: flex;
+  justify-content: left;
+  border-bottom: 1.25px solid rgba(255, 255, 255, 0.85);
 }
 
 .timeline-wrapper li div {
   margin: 1vh 2vw;
+  /* height: 100%; */
+}
+
+.timeline-wrapper li .timeline-timestamp {
+  /* text-align: left; */
+  width: 70%;
+
+  /* background-color: red; */
+}
+.timeline-category-icon {
+  width: 10%;
+  text-align: center;
+}
+.timeline-wrapper li .timeline-category {
+  width: 20%;
+  text-align: left;
 }
